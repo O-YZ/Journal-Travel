@@ -1,0 +1,106 @@
+*{
+    box-sizing: border-box;
+  }
+  
+  body{
+    margin:0;
+    padding: 0;
+    color: #2B283A;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  img{
+    max-width:100%;
+    /* remove spacing at bottom */
+    display: block;
+  }
+  
+  h1, h2, h3, p{
+    margin: 0;
+  }
+  
+  #root{
+    width: 550px;
+    margin: 0 auto;
+  }
+  header{
+    background-color: #F55A5A;
+    color:#FFFFFF;
+    padding: 25px;
+    text-align: center;
+  }
+  
+  .trip-listing{
+    margin-top: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  
+  .trip-card{
+    margin-top:40px;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 1fr 1fr 2fr;
+    grid-gap: 0px 20px;
+    }
+  
+    .trip-title,
+    .trip-location,
+    .location-link,
+    .trip-date,
+    .trip-description{
+      grid-column: 2;
+    }
+  
+    .location{
+      display: flex;
+      align-items: center;
+    }
+  
+    .location-icon{
+      width: 10px;
+      margin-right: 5px;
+      /* via https://codepen.io/sosuke/pen/Pjoqqp */
+      filter: invert(54%) sepia(11%) saturate(2737%) hue-rotate(313deg) brightness(91%) contrast(113%);
+    }
+    .location-link{
+      color:#918E9B;
+      font-size: .75rem;
+      text-transform:capitalize;
+      grid-row:1;
+      
+    }
+  
+    .trip-location{
+      grid-row: 1/2;
+      font-size:1rem;
+      font-weight:400;
+      text-transform: uppercase;
+      margin-right: 10px;
+    }
+  
+    .trip-title{
+      font-size:1.5rem;
+      grid-row:2/3;
+      text-transform: capitalize;
+    
+    }
+  
+    .trip-date{
+      grid-row:3/4;
+      font-weight:600;
+      font-size: .75rem;
+      padding-top: 25px;
+    }
+    .trip-description{
+      grid-row:4/5;
+      font-size:.75rem;
+    }
+  
+    .trip-image{
+      max-width: 150px;
+      border-radius: 10px;
+      grid-column: 1;
+      grid-row: 1/5;
+    }
